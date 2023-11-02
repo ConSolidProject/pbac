@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/pbac#"
+     xml:base="https://w3id.org/pbac"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/pbac#">
+        <owl:versionIRI rdf:resource="urn:absolute:0.0.1"/>
+        <terms:contributor>Erik Mannens</terms:contributor>
+        <terms:contributor>Jakob Beetz</terms:contributor>
+        <terms:contributor>Pieter Pauwels</terms:contributor>
+        <terms:creator>Jeroen Werbrouck</terms:creator>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-30T12:00:00</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/1.0/"/>
+        <terms:title>pbac vocabulary</terms:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/pbac#dataRequirement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pbac#dataRequirement">
+        <rdfs:domain rdf:resource="https://w3id.org/pbac#DynamicRule"/>
+        <rdfs:range rdf:resource="https://w3id.org/pbac#Requirement"/>
+        <rdfs:comment xml:lang="en">The data requirement of a dynamic rule.</rdfs:comment>
+        <rdfs:label xml:lang="en">data requirement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pbac#hasRuleCollection -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pbac#hasRuleCollection">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <rdfs:range rdf:resource="https://w3id.org/pbac#RuleCollection"/>
+        <rdfs:comment xml:lang="en">The rule collection of a catalog in the pbac ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">has rule collection</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pbac#hasTrustedAuthority -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pbac#hasTrustedAuthority">
+        <rdfs:domain rdf:resource="https://w3id.org/pbac#Requirement"/>
+        <rdfs:range rdf:resource="https://w3id.org/pbac#TrustedAuthority"/>
+        <rdfs:comment xml:lang="en">The trusted authority of a .</rdfs:comment>
+        <rdfs:label xml:lang="en">has trusted authority</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pbac#visitorRequirement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pbac#visitorRequirement">
+        <rdfs:domain rdf:resource="https://w3id.org/pbac#DynamicRule"/>
+        <rdfs:range rdf:resource="https://w3id.org/pbac#Requirement"/>
+        <rdfs:comment xml:lang="en">The visitor requirement of a dynamic rule.</rdfs:comment>
+        <rdfs:label xml:lang="en">visitor requirement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Catalog -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Catalog"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+    
+
+
+    <!-- https://w3id.org/pbac#AccessResource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pbac#AccessResource">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:comment xml:lang="en">A DCAT dataset containing the metadata of a PBAC dynamic rule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Access resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pbac#CredentialResource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pbac#CredentialResource">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:comment xml:lang="en">A DCAT dataset containing the metadata about a set of signed statements that can be used for access control.</rdfs:comment>
+        <rdfs:label xml:lang="en">Credential resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pbac#DynamicRule -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pbac#DynamicRule">
+        <rdfs:comment xml:lang="en">An access constrol rule in the PBAC framework, which can check the properties of both the requester and the requested resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dynamic rule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pbac#Issuer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pbac#Issuer">
+        <rdfs:comment xml:lang="en">An agent issuing a statement about another entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Issuer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pbac#Requirement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pbac#Requirement">
+        <rdfs:comment xml:lang="en">A requirement for accessing a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Requirement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pbac#RuleCollection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pbac#RuleCollection">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <rdfs:comment xml:lang="en">A collection of rules.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rule collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pbac#TrustedAuthority -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pbac#TrustedAuthority">
+        <rdfs:comment xml:lang="en">A trusted authority for making statements about another entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Trusted authority</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pbac#Visitor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pbac#Visitor">
+        <rdfs:comment xml:lang="en">An agent requesting access to a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Visitor</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,129 @@
+<https://w3id.org/pbac#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/pbac#> <http://www.w3.org/2002/07/owl#versionIRI> <urn:absolute:0.0.1> .
+<https://w3id.org/pbac#> <http://purl.org/dc/terms/contributor> "Erik Mannens" .
+<https://w3id.org/pbac#> <http://purl.org/dc/terms/contributor> "Jakob Beetz" .
+<https://w3id.org/pbac#> <http://purl.org/dc/terms/contributor> "Pieter Pauwels" .
+<https://w3id.org/pbac#> <http://purl.org/dc/terms/creator> "Jeroen Werbrouck" .
+<https://w3id.org/pbac#> <http://purl.org/dc/terms/issued> "2023-09-30T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/pbac#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/1.0/> .
+<https://w3id.org/pbac#> <http://purl.org/dc/terms/title> "pbac vocabulary" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/pbac#dataRequirement
+<https://w3id.org/pbac#dataRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pbac#dataRequirement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pbac#DynamicRule> .
+<https://w3id.org/pbac#dataRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pbac#Requirement> .
+<https://w3id.org/pbac#dataRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "The data requirement of a dynamic rule."@en .
+<https://w3id.org/pbac#dataRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "data requirement"@en .
+# 
+# https://w3id.org/pbac#hasRuleCollection
+<https://w3id.org/pbac#hasRuleCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pbac#hasRuleCollection> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Catalog> .
+<http://www.w3.org/ns/dcat#Catalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pbac#hasRuleCollection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pbac#RuleCollection> .
+<https://w3id.org/pbac#hasRuleCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "The rule collection of a catalog in the pbac ecosystem."@en .
+<https://w3id.org/pbac#hasRuleCollection> <http://www.w3.org/2000/01/rdf-schema#label> "has rule collection"@en .
+# 
+# https://w3id.org/pbac#hasTrustedAuthority
+<https://w3id.org/pbac#hasTrustedAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pbac#hasTrustedAuthority> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pbac#Requirement> .
+<https://w3id.org/pbac#hasTrustedAuthority> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pbac#TrustedAuthority> .
+<https://w3id.org/pbac#hasTrustedAuthority> <http://www.w3.org/2000/01/rdf-schema#comment> "The trusted authority of a ."@en .
+<https://w3id.org/pbac#hasTrustedAuthority> <http://www.w3.org/2000/01/rdf-schema#label> "has trusted authority"@en .
+# 
+# https://w3id.org/pbac#visitorRequirement
+<https://w3id.org/pbac#visitorRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pbac#visitorRequirement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/pbac#DynamicRule> .
+<https://w3id.org/pbac#visitorRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/pbac#Requirement> .
+<https://w3id.org/pbac#visitorRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "The visitor requirement of a dynamic rule."@en .
+<https://w3id.org/pbac#visitorRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "visitor requirement"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/dcat#Catalog
+# 
+# http://www.w3.org/ns/dcat#Dataset
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/pbac#AccessResource
+<https://w3id.org/pbac#AccessResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pbac#AccessResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
+<https://w3id.org/pbac#AccessResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A DCAT dataset containing the metadata of a PBAC dynamic rule."@en .
+<https://w3id.org/pbac#AccessResource> <http://www.w3.org/2000/01/rdf-schema#label> "Access resource"@en .
+# 
+# https://w3id.org/pbac#CredentialResource
+<https://w3id.org/pbac#CredentialResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pbac#CredentialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
+<https://w3id.org/pbac#CredentialResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A DCAT dataset containing the metadata about a set of signed statements that can be used for access control."@en .
+<https://w3id.org/pbac#CredentialResource> <http://www.w3.org/2000/01/rdf-schema#label> "Credential resource"@en .
+# 
+# https://w3id.org/pbac#DynamicRule
+<https://w3id.org/pbac#DynamicRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pbac#DynamicRule> <http://www.w3.org/2000/01/rdf-schema#comment> "An access constrol rule in the PBAC framework, which can check the properties of both the requester and the requested resource."@en .
+<https://w3id.org/pbac#DynamicRule> <http://www.w3.org/2000/01/rdf-schema#label> "Dynamic rule"@en .
+# 
+# https://w3id.org/pbac#Issuer
+<https://w3id.org/pbac#Issuer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pbac#Issuer> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent issuing a statement about another entity."@en .
+<https://w3id.org/pbac#Issuer> <http://www.w3.org/2000/01/rdf-schema#label> "Issuer"@en .
+# 
+# https://w3id.org/pbac#Requirement
+<https://w3id.org/pbac#Requirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pbac#Requirement> <http://www.w3.org/2000/01/rdf-schema#comment> "A requirement for accessing a resource."@en .
+<https://w3id.org/pbac#Requirement> <http://www.w3.org/2000/01/rdf-schema#label> "Requirement"@en .
+# 
+# https://w3id.org/pbac#RuleCollection
+<https://w3id.org/pbac#RuleCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pbac#RuleCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Catalog> .
+<https://w3id.org/pbac#RuleCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of rules."@en .
+<https://w3id.org/pbac#RuleCollection> <http://www.w3.org/2000/01/rdf-schema#label> "Rule collection"@en .
+# 
+# https://w3id.org/pbac#TrustedAuthority
+<https://w3id.org/pbac#TrustedAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pbac#TrustedAuthority> <http://www.w3.org/2000/01/rdf-schema#comment> "A trusted authority for making statements about another entity."@en .
+<https://w3id.org/pbac#TrustedAuthority> <http://www.w3.org/2000/01/rdf-schema#label> "Trusted authority"@en .
+# 
+# https://w3id.org/pbac#Visitor
+<https://w3id.org/pbac#Visitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pbac#Visitor> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent requesting access to a resource."@en .
+<https://w3id.org/pbac#Visitor> <http://www.w3.org/2000/01/rdf-schema#label> "Visitor"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

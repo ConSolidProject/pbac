@@ -1,0 +1,300 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "https://w3id.org/pbac", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/dcat" ],
+    "title" : {
+      "undefined" : "pbac vocabulary"
+    },
+    "iri" : "https://w3id.org/pbac#",
+    "author" : [ "Jeroen Werbrouck" ],
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/1.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Jeroen Werbrouck",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Jakob Beetz",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Erik Mannens",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Pieter Pauwels",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2023-09-30T12:00:00",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "pbac vocabulary",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/pbac#TrustedAuthority",
+    "baseIri" : "https://w3id.org/pbac",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TrustedAuthority",
+      "en" : "Trusted authority"
+    },
+    "comment" : {
+      "en" : "A trusted authority for making statements about another entity."
+    },
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/pbac#RuleCollection",
+    "baseIri" : "https://w3id.org/pbac",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RuleCollection",
+      "en" : "Rule collection"
+    },
+    "comment" : {
+      "en" : "A collection of rules."
+    },
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#Catalog",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Catalog"
+    },
+    "subClasses" : [ "4" ],
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#Dataset",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset"
+    },
+    "subClasses" : [ "9", "7" ],
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/pbac#Visitor",
+    "baseIri" : "https://w3id.org/pbac",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Visitor",
+      "en" : "Visitor"
+    },
+    "comment" : {
+      "en" : "An agent requesting access to a resource."
+    },
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/pbac#AccessResource",
+    "baseIri" : "https://w3id.org/pbac",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AccessResource",
+      "en" : "Access resource"
+    },
+    "comment" : {
+      "en" : "A DCAT dataset containing the metadata of a PBAC dynamic rule."
+    },
+    "id" : "9",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/pbac#CredentialResource",
+    "baseIri" : "https://w3id.org/pbac",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CredentialResource",
+      "en" : "Credential resource"
+    },
+    "comment" : {
+      "en" : "A DCAT dataset containing the metadata about a set of signed statements that can be used for access control."
+    },
+    "id" : "7",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/pbac#Issuer",
+    "baseIri" : "https://w3id.org/pbac",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Issuer",
+      "en" : "Issuer"
+    },
+    "comment" : {
+      "en" : "An agent issuing a statement about another entity."
+    },
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/pbac#DynamicRule",
+    "baseIri" : "https://w3id.org/pbac",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DynamicRule",
+      "en" : "Dynamic rule"
+    },
+    "comment" : {
+      "en" : "An access constrol rule in the PBAC framework, which can check the properties of both the requester and the requested resource."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/pbac#Requirement",
+    "baseIri" : "https://w3id.org/pbac",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Requirement",
+      "en" : "Requirement"
+    },
+    "comment" : {
+      "en" : "A requirement for accessing a resource."
+    },
+    "id" : "3"
+  } ],
+  "property" : [ {
+    "id" : "1",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/pbac#dataRequirement",
+    "baseIri" : "https://w3id.org/pbac",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "dataRequirement",
+      "en" : "data requirement"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The data requirement of a dynamic rule."
+    },
+    "attributes" : [ "object" ],
+    "id" : "1"
+  }, {
+    "range" : "8",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/pbac#visitorRequirement",
+    "baseIri" : "https://w3id.org/pbac",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "visitorRequirement",
+      "en" : "visitor requirement"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The visitor requirement of a dynamic rule."
+    },
+    "attributes" : [ "object" ],
+    "id" : "10"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  }, {
+    "range" : "8",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/pbac#hasRuleCollection",
+    "baseIri" : "https://w3id.org/pbac",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasRuleCollection",
+      "en" : "has rule collection"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "The rule collection of a catalog in the pbac ecosystem."
+    },
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/pbac#hasTrustedAuthority",
+    "baseIri" : "https://w3id.org/pbac",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "hasTrustedAuthority",
+      "en" : "has trusted authority"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "The trusted authority of a ."
+    },
+    "attributes" : [ "object" ],
+    "id" : "16"
+  } ]
+}
